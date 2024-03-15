@@ -1,0 +1,18 @@
+/* app.component.css */
+
+.navbar-nav .nav-link {
+    color: #fff;
+  }
+  
+  .navbar-nav .nav-link.active {
+    font-weight: bold;
+  }
+  
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+
+  

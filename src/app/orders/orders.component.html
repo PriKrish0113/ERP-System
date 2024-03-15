@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="mb-4">Orders Management</h2>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer Name</th>
+                <th>Order Date</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let order of orders">
+                <td>{{ order.orderId }}</td>
+                <td>{{ order.customerName }}</td>
+                <td>{{ order.orderDate | date }}</td>
+                <td>{{ order.status }}</td>
+                <td>
+                  <button class="btn btn-primary btn-sm" (click)="viewOrderDetails(order.orderId)">View Details</button>
+                  <button class="btn btn-danger btn-sm" (click)="deleteOrder(order.orderId)">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
